@@ -122,7 +122,7 @@ class DetailRestoActivity : AppCompatActivity() {
     private fun getDetailResto() {
         mProgressBar?.show()
         AndroidNetworking.get(ApiEndpoint.BASEURL + ApiEndpoint.DetailRestaurant + IdResto)
-                .addHeaders("user-key", "47efd9e28084554e8cb693354d4c997d")
+                .addHeaders("user-key", "ZOMATO API KEY")
                 .setPriority(Priority.HIGH)
                 .build()
                 .getAsJSONObject(object : JSONObjectRequestListener {
@@ -199,7 +199,7 @@ class DetailRestoActivity : AppCompatActivity() {
     private fun getReviewResto() {
         mProgressBar?.show()
         AndroidNetworking.get(ApiEndpoint.BASEURL + ApiEndpoint.ReviewRestaurant + IdResto)
-                .addHeaders("user-key", "47efd9e28084554e8cb693354d4c997d")
+                .addHeaders("user-key", "ZOMATO API KEY")
                 .setPriority(Priority.HIGH)
                 .build()
                 .getAsJSONObject(object : JSONObjectRequestListener {
